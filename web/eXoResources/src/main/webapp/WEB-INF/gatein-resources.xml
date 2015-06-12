@@ -32,6 +32,9 @@
     <script>
       <path>/javascript/eXo/core/require.js</path>
     </script>
+    <script>
+      <path>/javascript/eXo/crowdin/crowdinJIPT.js</path>
+    </script>
   </scripts>
 
   <module>
