@@ -24,6 +24,7 @@ import java.util.List;
 
 import org.exoplatform.commons.utils.ListAccess;
 import org.exoplatform.container.ExoContainerContext;
+import org.exoplatform.container.PortalContainer;
 import org.exoplatform.services.organization.OrganizationService;
 import org.exoplatform.services.organization.User;
 import org.exoplatform.services.organization.UserStatus;
@@ -161,7 +162,6 @@ public class IDMUserListAccess implements ListAccess<User>, Serializable {
     }
 
     PicketLinkIDMOrganizationServiceImpl getOrganizationService() {
-        return (PicketLinkIDMOrganizationServiceImpl) ExoContainerContext.getCurrentContainer().getComponentInstanceOfType(
-                OrganizationService.class);
+        return (PicketLinkIDMOrganizationServiceImpl) PortalContainer.getInstance().getComponentInstanceOfType(OrganizationService.class);
     }
 }
