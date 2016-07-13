@@ -179,7 +179,9 @@ public class NewPortalConfigListener extends BaseComponentPlugin {
             overrideExistingData = false;
         }
         for (NewPortalConfig ele : configs) {
-          ele.setOverrideMode(overrideExistingData);
+            if (!ele.getOverrideMode()) {
+                ele.setOverrideMode(overrideExistingData);
+            }
         }
         this.pomMgr = pomMgr;
     }
